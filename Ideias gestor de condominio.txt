@@ -1,30 +1,30 @@
-liberar visita(usar uma lista para cada vizinho)
-anunciar visitas
-avisos de manuntenção de condominio
-conversar com vizinhos ou sindico
-avisar entrada de serviços
-avisar que chegou correspondecia
-controle de reservas de serviços do condominio
-contactar com portaria 24 hrs e em qualquer lugar
-controle de entrada e saida de visitantes
+serviÃ§os disponÃ­veis perto do condomÃ­nio(cobrar aos servidores -> cobrar por quantidade de pessoas atingidas)
+liberar visita (usar uma lista para cada vizinho / mensagem -> morador portaria)
+anunciar visitas (mensagem -> portaria morador)
+avisos de manuntenÃ§Ã£o de condominio (mensagem no mural do condomÃ­nio -> alerta para novas menagens)
+conversar com vizinhos ou sindico (mensagem estilo e-mail, mercadoLivre)
+avisar entrada de serviÃ§os(mensagem -> morador portaria)
+avisar que chegou correspondecia(mensagem -> portaria morador)
+controle de reservas de serviÃ§os do condominio(mensagem -> morador portaria)
+    adcionar
+    buscar
+    excluir
+contactar com portaria 24 hrs e em qualquer lugar(mensagem -> morador portaria)
+controle de entrada e saida de visitantes(histÃ³rico)
 cadastrar moradores
-Saiba quem já visualizou a convocação da reunião de condomínio e mande cópia da ata para quem não compareceu
-Ninguém é síndico pra sempre, deixe registrado contratos, ocorrências, solicitações e tenha um histórico do condomínio.
-Síndico também tem vida. Quando possível, encaminhe ocorrências e reclamações com fotos que chegaram enquanto esteve ausente.
-log para porteiro
-Com verificações periódicas saiba se o porteiro estava no local de trabalho e que horas fez login, com foto e tudo.
-Chega de disse-me-disse: a autorização do morador fica gravada e os recados deixados na portaria não se perdem com a mudança de turnos.
-Encontre imediatamente o prestador de serviço ideal para sua necessidade e ajude seus vizinhos deixando sua avaliação sobre o mesmo.
-Lista com avaliações de sugestões de serviços (onde comprar água)
-Documentos relevantes sempre à disposição dos condôminos.(padrões e regras)
-eleição de sindico pelo aplicativo
-cadastrar moradores pelo codigo de acesso de cada condominio
+Saiba quem jÃ¡ visualizou a convocaÃ§Ã£o da reuniÃ£o de condomÃ­nio e *mande cÃ³pia da ata para quem nÃ£o compareceu*(histÃ³rico de reuniÃµes)
+NinguÃ©m Ã© sÃ­ndico pra sempre, deixe registrado contratos, ocorrÃªncias, solicitaÃ§Ãµes e tenha um histÃ³rico do condomÃ­nio.(histÃ³rico)
+SÃ­ndico tambÃ©m tem vida. Quando possÃ­vel, encaminhe ocorrÃªncias e reclamaÃ§Ãµes com fotos que chegaram enquanto esteve ausente.
+log para porteiro(trocas de porteiros)
+Lista com avaliaÃ§Ãµes de sugestÃµes de serviÃ§os (onde comprar Ã¡gua)
+Documentos relevantes sempre Ã  disposiÃ§Ã£o dos condÃ´minos.(padrÃµes e regras)
+troca de sindico pelo aplicativo(o sÃ­ndico passa a sindicÃ¢ncia para o outro)
+Cadastro "bola azul" feito na portaria
+  os demais cadastros da casa feito pelo "bola azul"
+  cada casa tem um cÃ³digo que representa o condomÃ­nio e a casa (8000.002)
 Controle de taxas de condiminio 
-avisos e controles de quem ta devendo
-ter lider da casa
-Controle de casa a serem alugadas ou vendidas
-Horarios de serviço disponiveis 
-Qualquer parte de finanças o macho alfa tem que altorizar
-primeiro cadastrado é o macho alta e todos morador do mesmo apartamento são "filhos" e exigem permição do macho alfa para serem cadastrados
+Controle de casa a serem alugadas ou vendidas(mural do condomÃ­nio)
+Horarios de serviÃ§o disponiveis(ex: horÃ¡rio de personal, horÃ¡rio de piscina)
+Qualquer parte de finanÃ§as o macho alfa tem que autorizar
 
 
