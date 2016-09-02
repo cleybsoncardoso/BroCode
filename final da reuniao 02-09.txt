@@ -1,0 +1,9 @@
+Ideias:
+
+->usar fio, já que o PIR vai ficar no teto e usar canaleta pra esconder o fio;
+
+->A saida do primeiro PIR alimenta o segundo, identificando se o cliente está saindo ou entrando na loja;
+
+->utilizar maquina de estado para evitar o uso de microcontrolador para os bips (555 e c1);
+|-> Já implementada por havallon;
+
