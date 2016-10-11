@@ -26,5 +26,6 @@ Controle de taxas de condiminio
 Controle de casa a serem alugadas ou vendidas(mural do condomínio)
 Horarios de serviço disponiveis(ex: horário de personal, horário de piscina)
 Qualquer parte de finanças o macho alfa tem que autorizar
+O bola azul pode mudar o nível de permissão dos outros usuários da casa (filho pequeno não poder liberar visita)
 
 
