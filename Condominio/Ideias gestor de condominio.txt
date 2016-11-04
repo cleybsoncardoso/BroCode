@@ -1,0 +1,31 @@
+serviços disponíveis perto do condomínio(cobrar aos servidores -> cobrar por quantidade de pessoas atingidas)
+liberar visita (usar uma lista para cada vizinho / mensagem -> morador portaria)
+anunciar visitas (mensagem -> portaria morador)
+avisos de manuntenção de condominio (mensagem no mural do condomínio -> alerta para novas menagens)
+conversar com vizinhos ou sindico (mensagem estilo e-mail, mercadoLivre)
+avisar entrada de serviços(mensagem -> morador portaria)
+avisar que chegou correspondecia(mensagem -> portaria morador)
+controle de reservas de serviços do condominio(mensagem -> morador portaria)
+    adcionar
+    buscar
+    excluir
+contactar com portaria 24 hrs e em qualquer lugar(mensagem -> morador portaria)
+controle de entrada e saida de visitantes(histórico)
+cadastrar moradores
+Saiba quem já visualizou a convocação da reunião de condomínio e *mande cópia da ata para quem não compareceu*(histórico de reuniões)
+Ninguém é síndico pra sempre, deixe registrado contratos, ocorrências, solicitações e tenha um histórico do condomínio.(histórico)
+Síndico também tem vida. Quando possível, encaminhe ocorrências e reclamações com fotos que chegaram enquanto esteve ausente.
+log para porteiro(trocas de porteiros)
+Lista com avaliações de sugestões de serviços (onde comprar água)
+Documentos relevantes sempre à disposição dos condôminos.(padrões e regras)
+troca de sindico pelo aplicativo(o síndico passa a sindicância para o outro)
+Cadastro "bola azul" feito na portaria
+  os demais cadastros da casa feito pelo "bola azul"
+  cada casa tem um código que representa o condomínio e a casa (8000.002)
+Controle de taxas de condiminio 
+Controle de casa a serem alugadas ou vendidas(mural do condomínio)
+Horarios de serviço disponiveis(ex: horário de personal, horário de piscina)
+Qualquer parte de finanças o macho alfa tem que autorizar
+O bola azul pode mudar o nível de permissão dos outros usuários da casa (filho pequeno não poder liberar visita)
+
+
