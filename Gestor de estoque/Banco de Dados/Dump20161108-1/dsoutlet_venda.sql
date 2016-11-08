@@ -18,30 +18,36 @@ USE `dsoutlet`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `usuario`
+-- Table structure for table `venda`
 --
 
-DROP TABLE IF EXISTS `usuario`;
+DROP TABLE IF EXISTS `venda`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuario` (
+CREATE TABLE `venda` (
   `id` tinyint(4) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `login` varchar(30) NOT NULL,
-  `senha` varchar(30) NOT NULL,
-  `acesso` enum('A','C') NOT NULL,
-  PRIMARY KEY (`id`)
+  `idusuario` tinyint(4) NOT NULL,
+  `idproduto` tinyint(4) NOT NULL,
+  `idloja` tinyint(4) NOT NULL,
+  `cpfcliente` varchar(14) DEFAULT NULL,
+  `precovenda` decimal(5,2) NOT NULL,
+  `tipopagamento` enum('D','F') NOT NULL,
+  `dh` timestamp NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idproduto` (`idproduto`),
+  KEY `idusuario` (`idusuario`),
+  KEY `idloja` (`idloja`),
+  KEY `cpfcliente` (`cpfcliente`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuario`
+-- Dumping data for table `venda`
 --
 
-LOCK TABLES `usuario` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+LOCK TABLES `venda` WRITE;
+/*!40000 ALTER TABLE `venda` DISABLE KEYS */;
+/*!40000 ALTER TABLE `venda` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-07 19:00:46
+-- Dump completed on 2016-11-08 20:23:54
