@@ -1,0 +1,6 @@
+data de pagamento
+controle de pagamentp
+quantidade de parcelas
+desconto (percentual e valor)
+troco
+cadastrar tamanho (sapato e bermuda)
