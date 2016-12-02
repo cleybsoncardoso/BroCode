@@ -261,6 +261,8 @@ CREATE TABLE `usuario` (
   `senha` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
   `acesso` enum('A','C') NOT NULL,
+  `dataAdmissao` date NOT NULL,
+  `telefone` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -271,7 +273,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'admin','admin','admin','admin@admin.com','A');
+INSERT INTO `usuario` VALUES (1,'admin','admin','admin','admin@admin.com','A','0000-00-00','');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -314,4 +316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-01  1:12:51
+-- Dump completed on 2016-12-02  3:22:49
