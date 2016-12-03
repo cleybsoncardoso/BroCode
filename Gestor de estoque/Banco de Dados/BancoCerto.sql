@@ -26,13 +26,14 @@ CREATE TABLE `cliente` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `cpf` varchar(14) NOT NULL,
   `nome` varchar(100) NOT NULL,
-  `nascimento` date NOT NULL,
+  `nascimento` date DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `enderecoIDEndereco` int(10) unsigned NOT NULL,
+  `telefone` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`,`cpf`,`enderecoIDEndereco`),
   KEY `fk_Cliente_Endereco1_idx` (`enderecoIDEndereco`),
   CONSTRAINT `fk_Cliente_Endereco1` FOREIGN KEY (`enderecoIDEndereco`) REFERENCES `endereco` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +42,6 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (3,'2703001186','lucas ventura','1995-07-24','luskpava@hotmail.com',1);
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,13 +83,13 @@ DROP TABLE IF EXISTS `endereco`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `endereco` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `cep` varchar(9) NOT NULL,
-  `lLogradouro` varchar(80) NOT NULL,
-  `numero` int(11) NOT NULL,
-  `uf` varchar(2) NOT NULL,
-  `telefone` varchar(14) NOT NULL,
-  PRIMARY KEY (`id`,`cep`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `cep` varchar(9) DEFAULT NULL,
+  `logradouro` varchar(80) DEFAULT NULL,
+  `numero` int(11) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
+  `cidade` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +98,6 @@ CREATE TABLE `endereco` (
 
 LOCK TABLES `endereco` WRITE;
 /*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
-INSERT INTO `endereco` VALUES (1,'4403830','teste',20,'ba','7530215497');
 /*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,14 +164,14 @@ CREATE TABLE `produto` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `marca` varchar(45) NOT NULL,
   `modelo` varchar(45) NOT NULL,
-  `tamanho` varchar(45) NOT NULL,
+  `tamanho` varchar(3) NOT NULL,
   `quantidade` int(11) NOT NULL,
   `precoEntrada` decimal(5,2) DEFAULT NULL,
   `precoSaidaPadrao` decimal(5,2) DEFAULT NULL,
   `maximo` int(11) DEFAULT NULL,
   `minimo` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +180,7 @@ CREATE TABLE `produto` (
 
 LOCK TABLES `produto` WRITE;
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` VALUES (1,'marca','modelo','M',1,10.00,20.00,40,30),(2,'teste','teste','P',200,500.00,600.00,7000,2000),(3,'asdf','asdf','P',12,0.00,200.00,12,12);
+INSERT INTO `produto` VALUES (1,'teste','teste','P',200,300.00,200.00,500,100),(2,'asdf','asdf','P',1212,0.00,121.00,1212,1212),(3,'asdf2','asdf2','P',123,0.00,123.00,123,123),(4,'Kappa','Polo Sewill','M',80,0.00,49.90,200,50);
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -264,8 +263,10 @@ CREATE TABLE `usuario` (
   `senha` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
   `acesso` enum('A','C') NOT NULL,
+  `dataAdmissao` date NOT NULL,
+  `telefone` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,7 +275,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'admin','admin','admin','admin@admin.com','A'),(2,'teste','teste','teste','teste','A'),(3,'a','b','c','a','A'),(4,'Luciano','dum123','teste','dim@hotmail.com','C');
+INSERT INTO `usuario` VALUES (1,'Eu Mesmo','admin','admin','admin@admin.com','A','1995-01-10','7530215497'),(3,'Lucas Paiva','lvpaiva','1234','lukspaiva@hotmail.com','A','2016-12-01','7530215497'),(4,'Cleybson Cardoso','cleyc','1234','cleybson@gmail.com','A','2016-10-07','7592220297'),(6,'Gabriel Miranda','mirandinha','2424','miranda.24@hotmail.com','C','2024-04-24','7599692424'),(7,'Lindelmo Havallon','haval','1234','lindemo@htormail.com','A','2013-09-28','7536230001'),(8,'Icaro RIos','rock','rios','rockrios@hotmail.com','A','2004-04-24','40028922'),(9,'José Ricardo','rick','123123','rick@hotmail.com','A','2004-04-24','1');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -317,4 +318,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-01 23:35:22
+-- Dump completed on 2016-12-02 21:33:41
