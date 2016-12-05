@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
--- Host: localhost    Database: dsoutlet
+-- Host: 127.0.0.1    Database: dsoutlet
 -- ------------------------------------------------------
 -- Server version	5.7.16-log
 
@@ -168,8 +168,10 @@ CREATE TABLE `produto` (
   `quantidade` int(11) NOT NULL,
   `precoEntrada` decimal(5,2) DEFAULT NULL,
   `precoSaidaPadrao` decimal(5,2) DEFAULT NULL,
+  `ultimaCompra` decimal(5,2) DEFAULT NULL,
   `maximo` int(11) DEFAULT NULL,
   `minimo` int(11) DEFAULT NULL,
+  `dataUltimaCompra` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -180,7 +182,7 @@ CREATE TABLE `produto` (
 
 LOCK TABLES `produto` WRITE;
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` VALUES (1,'teste','teste','P',200,300.00,200.00,500,100),(2,'asdf','asdf','P',1212,0.00,121.00,1212,1212),(3,'asdf2','asdf2','P',123,0.00,123.00,123,123),(4,'Kappa','Polo Sewill','M',80,0.00,49.90,200,50);
+INSERT INTO `produto` VALUES (1,'teste','teste','P',200,300.00,200.00,NULL,500,100,NULL),(2,'asdf','asdf','P',1212,0.00,121.00,NULL,1212,1212,NULL),(3,'asdf2','asdf2','P',123,0.00,123.00,NULL,123,123,NULL),(4,'Kappa','Polo Sewill','M',80,0.00,49.90,NULL,200,50,NULL);
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -318,4 +320,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-02 21:33:41
+-- Dump completed on 2016-12-05  0:12:08
