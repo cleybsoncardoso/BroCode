@@ -173,7 +173,7 @@ CREATE TABLE `produto` (
   `precoSaidaPadrao` decimal(5,2) DEFAULT NULL,
   `maximo` int(11) DEFAULT NULL,
   `minimo` int(11) DEFAULT NULL,
-  `dataUltimaCompra` date DEFAULT NULL,
+  `dataUltimaCompra` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -184,7 +184,7 @@ CREATE TABLE `produto` (
 
 LOCK TABLES `produto` WRITE;
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` VALUES (4,'teste','testes','GG',302,100.00,200.00,500,10,'2016-12-08');
+INSERT INTO `produto` VALUES (4,'teste','testes','GG',302,100.00,200.00,500,10,'2016-12-08 03:00:00');
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,4 +294,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-09 11:52:08
+-- Dump completed on 2016-12-09 12:09:40
