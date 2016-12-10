@@ -144,7 +144,7 @@ CREATE TABLE `loja` (
   PRIMARY KEY (`id`,`enderecoIDEndereco`),
   KEY `fk_Loja_Endereco1_idx` (`enderecoIDEndereco`),
   CONSTRAINT `fk_Loja_Endereco1` FOREIGN KEY (`enderecoIDEndereco`) REFERENCES `endereco` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +153,6 @@ CREATE TABLE `loja` (
 
 LOCK TABLES `loja` WRITE;
 /*!40000 ALTER TABLE `loja` DISABLE KEYS */;
-INSERT INTO `loja` VALUES (1,'aaa',4);
 /*!40000 ALTER TABLE `loja` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,7 +175,7 @@ CREATE TABLE `produto` (
   `minimo` int(11) DEFAULT NULL,
   `dataUltimaCompra` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,7 +184,7 @@ CREATE TABLE `produto` (
 
 LOCK TABLES `produto` WRITE;
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` VALUES (4,'teste','testes','GG',302,100.00,200.00,500,10,'2016-12-08 03:00:00'),(5,'teste','testes','GG',40,150.00,200.00,500,10,'2016-12-08 03:00:00'),(6,'teste','testes','PP',50,150.00,200.00,500,10,'2016-12-08 03:00:00');
+INSERT INTO `produto` VALUES (4,'teste','testes','GG',302,100.00,200.00,500,10,'2016-12-08 03:00:00');
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +210,7 @@ CREATE TABLE `registro` (
   CONSTRAINT `fk_registro_loja1` FOREIGN KEY (`loja_id`) REFERENCES `loja` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_registro_produto1` FOREIGN KEY (`produto_id`) REFERENCES `produto` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_registro_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +219,6 @@ CREATE TABLE `registro` (
 
 LOCK TABLES `registro` WRITE;
 /*!40000 ALTER TABLE `registro` DISABLE KEYS */;
-INSERT INTO `registro` VALUES (1,'2016-12-09 21:26:09',1,3,'e',30,4),(2,'2016-12-09 21:26:34',1,3,'s',40,5);
 /*!40000 ALTER TABLE `registro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -240,7 +238,6 @@ CREATE TABLE `usuario` (
   `acesso` enum('A','C') NOT NULL,
   `dataAdmissao` date NOT NULL,
   `telefone` varchar(15) NOT NULL,
-  `ativo` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -251,7 +248,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (3,'cley','admin','admin','cley@cley','A','2016-12-08','77',0),(4,'thyago','thya','123','dsadsa@fd','C','2016-12-08','(32) 32323-2323',0);
+INSERT INTO `usuario` VALUES (3,'cley','admin','admin','cley@cley','A','2016-12-08','77'),(4,'thyago','thya','123','dsadsa@fd','C','2016-12-08','(32) 32323-2323');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -297,4 +294,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-09 21:52:52
+-- Dump completed on 2016-12-09 12:09:40
